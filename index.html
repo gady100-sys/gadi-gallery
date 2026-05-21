@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גדי לוי – אמנות בעץ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f6f0; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4a3525; 
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+        nav {
+            background-color: #3e2b1e;
+            text-align: center;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #f9f6f0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #4a3525;
+            border-bottom: 2px solid #e6dfd3;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .highlight {
+            font-style: italic;
+            color: #7d5a3e;
+            font-weight: bold;
+        }
+        
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .filter-btn {
+            background-color: #e6dfd3;
+            border: none;
+            color: #4a3525;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #4a3525;
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            background: #fff;
+            border: 1px solid #e6dfd3;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            display: block;
+        }
+        .item-info {
+            padding: 15px;
+            background: #fdfcfb;
+        }
+        .item-info h3 {
+            margin: 0 0 10px 0;
+            color: #4a3525;
+            font-size: 1.2rem;
+        }
+        .item-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .contact-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>גדי לוי – אמנות בעץ</h1>
+        <p>גלריה דיגיטלית של פסלים, פאזלים וציורים</p>
+    </header>
+
+    <nav>
+        <a href="#about">הסיפור שלי</a>
+        <a href="#gallery">הגלריה שלי</a>
+        <a href="#contact">יצירת קשר</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- מדור אודות -->
+        <section id="about" class="section">
+            <h2>נעים להכיר, אני גדי לוי</h2>
+            <p>שמי גדי לוי, יליד 1950, תושב זכרון יעקב משנת 1994 ודור עשירי בארץ. נשוי באהבה לאביבה, אבא למיכל, רחל וערן, וסבא גאה לנכדיי בארץ ובחו"ל.</p>
+            <p>החיבור שלי לחומר וליצירה התחיל מוקדם מאוד. כשהייתי בן 5 בלבד, בגן הילדים, יצרתי כלבלב זעיר מחימר. בגיל 12, גילפתי ציפור קטנה מעץ. הוריי היקרים שמרו על היצירות המוקדמות האלו, והן מלוות אותי בגאווה עד היום – עדות חיה לניצוץ האמנותי שחיכה בפנים.</p>
+            <p>במשך עשרות שנים נתיב החיים שלי היה רחוק לחלוטין מעולם האמנות הקלאסי. אני מהנדס מכונות, בוגר הטכניון משנת 1977. שירַתִּי 25 שנה בשירות קבע בחיל החימוש, ולאחר פרישתי מצה"ל בדרגת סגן-אלוף, ניהלתי מפעלי ייצור בתעשיות שונות – ממתכת ורכב, דרך רפואה ובטון, ועד לתעשיית העץ.</p>
+            <p>לפני כ-15 שנה, בעקבות פרישה מסיבה רפואית, חל המהפך. חומרי הגלם התעשייתיים והחישובים ההנדסיים פינו את מקומם, והאמן שבי פרץ החוצה בכל הכוח. פתאום, כל הידע הטכני, הבנת החומר והדיוק שרכשתי כמהנדס, התמזגו WITH התשוקה ליצירה.</p>
+            <p>המסע הנוכחי שלי החל בכלל מתוך געגוע ואהבה לנכדיי הקטנים שמעבר לים. רציתי להעניק להם משהו ייחודי, והתחלתי ליצור עבורם פאזלים מעץ. ההתרגשות הגדולה ביותר שלי הייתה לשמוע אותם מספרים בגאווה לחבריהם בחו"ל: <span class="highlight">"את זה סבא עשה!"</span>.</p>
+            <p>מאחר שהגעתי אל האמנות בעצמי, פיתחתי גם שיטת עבודה ייחודית לי. את "הסטודיו" שלי מחליף גזיבו עץ שבניתי במו ידיי בחצר הבית, ובו שולחן עבודה חזק. שם, תחת כיפת השמיים, מתרחש הקסם: אני לא מגלף בדרך המסורתית. את העבודה הראשונית והכבדה אני מבצע בעזרת מסור שרשרת ומסור ג'יג-סו (Jig saw). משם אני עובר לעשרות שעות של עבודה ידנית קפדנית עם פטיש ומפסלות בגדלים שונים, ומסיים בליטוש סבלני – תחילה בפצירות יד, ולאחר מכן בכרסומים זעירים המורכבים על רוטור חשמלי.</p>
+            <p>מפסל לפסל הרגשתי כיצד הטכניקה, הנפח והרמה המקצועית שלי עולות ומעמיקות. לצד עשרות פסלי העץ, אני יוצר גם ציורי שמן, שהופכים לעיתים לפאזלים ייחודיים, ותמונות גדולות (חלקן מפארות כיום את חדר העבודה של חתני באמריקה).</p>
+            <p>לאחר שהצגתי את עבודותיי במסגרת "בתים פתוחים" בזכרון יעקב וזכיתי לשתף את היצירה שלי עם מאות מבקרים, אני נרגש לפתוח את הדלתות של הגלריה הדיגיטלית הזו בפניכם.</p>
+        </section>
+
+        <!-- מדור גלריה -->
+        <section id="gallery" class="section">
+            <h2>הגלריה שלי</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterGallery('all')">הכל</button>
+                <button class="filter-btn" onclick="filterGallery('sculpture')">פסלים מעץ</button>
+                <button class="filter-btn" onclick="filterGallery('sculpture-useful')">פסלים שימושיים מעץ</button>
+              <button class="filter-btn" onclick="filterGallery('puzzles-kids')">פאזלים למשחק</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-hot')">פאזלים לכלי חם</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-decor')">פאזלים לקישוט</button>
+                <button class="filter-btn" onclick="filterGallery('photos-wood')">תמונות מעץ</button>
+              <button class="filter-btn" onclick="filterGallery('oil-paintings')">ציורי שמן</button>
+             <button class="filter-btn" onclick="filterGallery('garden')">קישוטים לגינה</button>
+     
+        </div>
+
+            <div class="gallery-grid">
+                
+                <!-- יצירה 1 -->
+                <div class="gallery-item sculpture">
+    <!-- התמונה הראשית והגדולה -->
+    <img src="images/sculpture1a.jpg" alt="פסל מעץ - מבט ראשי">
+    
+    <div class="item-info">
+        <h3>פסל ראש אישה מוקדש לשורדות סרטן השד</h3>
+        <p>עבודת יד בגזיבו בחצר | סוג עץ: אורן</p>
+        
+                      <!-- מקום לסיפור שמאחורי היצירה -->
+        <p style="margin-top: 15px; color: #555; font-size: 0.9rem;">
+            בתהליך העבודה כשהגעתי לפסל את החזה, התברר לי שאין מספיק חומר. על גדם השד רשמתי את המילים - I am a survivor וחרטתי את סמל סרטן השד שלימים הפך לסמל החטופים.
+        </p>
+    </div>
+</div>
+
+  <!-- יצירה 1 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture1b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ראש אישה מוקדש לשורדות סרטן השד</h3>
+                        <p>
+                    </div>
+                </div>
+
+  <!-- יצירה 1 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture1c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ראש אישה מוקדש לשורדות סרטן השד</h3>
+                        <p> הכתובת שחרטתי על גדם השד החסר. גובה 65 ס"מ, משקל 42 ק"ג.
+                    </div>
+                </div>
+
+
+  <!-- יצירה 2 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture2a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל האיש המתלבט בין יצריו</h3>
+                        <p>יצרתי מעץ סיסם הודי שהתבקע והבקע הביא את רעיון ההתלבטות בין היצר הטוב ליצר הרע. הושבתי לו מלאך על כתף ימין ושד על כתף שמאל כביטוי ליצרים</p>
+                    </div>
+                </div>
+
+ <!-- יצירה 2 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture2b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל האיש המתלבט בין יצריו</h3>
+                        <p>עץ הסיסם ההודי בנוי בשכבות, כך שהליבה כהה והמעטפת לבנה. מוטיב נוסף לביטוי ההתלבטות.
+השד הרוכב על כתף שמאל נראה כאן בברור. גובה 54 ס"מ, משקל 15 ק"ג ללא הבסיס.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture2c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל האיש המתלבט בין יצריו</h3>
+                        <p>כאן ניתן לראות את המלאך על כתף ימין. 
+                               האיש מכסה את פניו בידיו מתוך יאוש.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture2d.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל האיש המתלבט בין יצריו</h3>
+                        <p>כאן ניתן לראות את הפסל מוצב על בסיס שקניתי בדלית אל כרמל והעשוי גם כן מעץ סיסם הודי.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture3a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>שולחן לסלון עם עובר תינוק ברחם.</h3>
+                        <p>יצרתי במשך 5 חודשים מפרוסת גזע עץ אורן שרכשתי במושב נטף. מעל הנכתי לוח זכוכית מחוסמת עגולה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture3b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>שולחן לסלון עם עובר תינוק ברחם.</h3>
+                        <p>מראה השולחן עם הרגליים (הנפרדות). קוטר מקסימאלי 75 ס"מ, גובה 40 ס"מ, משקל 32 ק"ג.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture4a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה ארוכה.</h3>
+                        <p>יצרתי אותה מקורת עץ אלון שהיתה מיועדת להיות רגל לשולחן.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture4b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה ארוכה.</h3>
+                        <p>מבט מלפנים. יצרתי לה שסע גבוה בשמלה כדי שלא יחשבו שזה פסל עם קונוטציה דתית.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture5a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ציפור אפריקאית.</h3>
+                        <p>בדרום אפריקה ראיתי ציפור שחורה, גדולה מיונה, היונקת צוף מפירחי אלוורה, בדומה לצופית הישראלית. יצרתי את דמותה בעץ וצבעתי בשחור. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture5b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ציפור אפריקאית.</h3>
+                        <p>מבט מלפנים. גובה 38 ס"מ כולל הבסיס. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture6a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גורילה האוחזת בגור שלה.</h3>
+                        <p>לקח לי שבוע ליצור את המבט האימהי על פניה וחודשיים עבודה מאומצת לסיים את כל העבודה.. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture6b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גורילה האוחזת בגור שלה.</h3>
+                        <p>עץ צאלון צהוב צבוע בלכה שחורה שקופה. גובה 53 ס"מ, משקל 34 ק"ג. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture6c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גורילה האוחזת בגור שלה.</h3>
+                        <p>הפסל על בסיס. </p>
+                    </div>
+                </div>
+
+
+<!-- יצירה 7 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture7a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל הגברים בוכים בלילה.</h3>
+                        <p>על פי שירו של אבנר גדסי, יצרתי מסכת מאצ'ו ללא הבעת רגשות ודמעות זולגות מעיניה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 7 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture7b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל הגברים בוכים בלילה.</h3>
+                        <p>עץ צאלון צהוב צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 8 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture8a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל נמר.</h3>
+                        <p>עץ מסוג לא ידוע צבוע בלכה שקופה. גובה 76 ס"מ, משקל 25 ק"ג. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 8 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture8b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל נמר.</h3>
+                        <p>כל אחד רואה בו חיה אחרת - נמר, כלב, דוב. העיקר שאוהבים. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 9 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture9a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל עייט - The Bald American Eagle צולל על שלושה דגים.</h3>
+                        <p>יצרתי בהשראת מראה עופות אדירים אלה צוללים באלסקה על דגי הסלמון. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 9 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture9b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל עייט - The Bald American Eagle צולל על שלושה דגים.</h3>
+                        <p>עץ צאלון לבן. למזלי מרקם העץ מתאים בדיוק לצוואר הלבן והגוף הכהה של העיט. צבעתי בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 9 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture9c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל עייט - The Bald American Eagle צולל על שלושה דגים.</h3>
+                        <p>מבט נוסף </p>
+                    </div>
+                </div>
+
+<!-- יצירה 10 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture10a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל עם ישראל הנאבק בטרור.</h3>
+                        <p>הצגתי את עם ישראל בדמות יונת השלום האוחזת ענף זית בפיה. נחש החמס העולה מהמחילה מכיש אותה והיא דוקרת אותו בחרבה. על בסיס הפסל חרטתי את המילים - "אין לי ארץ אחרת". </p>
+                    </div>
+                </div>
+
+<!-- יצירה 10 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture10b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל עם ישראל הנאבק בטרור.</h3>
+                        <p>יצרתי את הפסל באוקטובר 2023 בהשראת האסון. הפסל מוצג בתערוכת "אין לי ארץ אחרת" בבית יד לבנים באור-יהודה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 11 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture11a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל הבריאה אל מול האבולוציה.</h3>
+                        <p>הצגתי את האבולוציה בדמול שתי מולקולות DNA כשכל כדור מבטא אטום. מן המולקולות יוצאים בעלי חיים פרימיטיביים כגון כוכב ים, דיונון ומדוזה. בהמשך יוצאים חרקים ודגים, אחר כך דינוזאורים ויונקים. בסך הכל יש בו 20 בעלי חיים. בתחתית הפסל דמויות גבר ואישה במנח לידה, כשברק האלוהים פוגע לכל אחד מהם בראש. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 11 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture11b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל הבריאה אל מול האבולוציה.</h3>
+                        <p>הפסל כולו עשוי מגוש עץ אחד. יצירתו נמשכה 14 חודשים. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 11 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture11c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל הבריאה אל מול האבולוציה.</h3>
+                        <p>הפסל צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture12a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה חופפת את שערה בנהר.</h3>
+                        <p>הפסל צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture12b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה חופפת את שערה בנהר.</h3>
+                        <p>יצרתי את הפסל מבול עץ שרוף שהתגלגל בין החצרות ברמת ישי. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture12c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה חופפת את שערה בנהר.</h3>
+                        <p>נוצר בהשראת סרט שראיתי. גובה 42 ס"מ, משקך 9 ק"ג.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 13 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture13a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה רוקדת</h3>
+                        <p>הפיתולים בגזע העץ נראו לי כמו שערה ושימלתה המתבדרת של רקדנית וכך אכן יצא. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 13 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture13b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל אישה רוקדת</h3>
+                        <p>עץ צאלון צהוב צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 14 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture14a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>שולחן סלון עם בסיס בצורת ראש סוס מלחך עשב ונחיריו פעורים לרווחה.</h3>
+                        <p>עץ צאלון צהוב צבוע בלכה שקופה. עליו מורכב לוח זכוכית מחוסמת אליפטית במידות 80X55 ס"מ. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 14 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture14b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>שולחן סלון עם בסיס בצורת ראש סוס מלחך עשב ונחיריו פעורים לרווחה.</h3>
+                        <p>השולחן בביתו של ערן בני בחיפה. </p>
+                    </div>
+                </div>
+
+
+<!-- יצירה 15 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture15a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>דמות דימיונית עם חצי גוף של אישה ולצידיה נחש ודג.</h3>
+                        <p>יצרתי מגזע שיח שגדל אצלי בחצר למימדים מבהילים. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 15 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture15b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>דמות דימיונית עם חצי גוף של אישה ולצידיה נחש ודג.</h3>
+                        <p>יצרתי במשך 4 חודשי עבודה. גובה 75 ס"מ, משקל 8 ק"ג. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 16 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture16a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיצרתי עבור מעבדת הגנטיקה של מיכל ביתי בארה"ב.</h3>
+                        <p>הפסל אמור לבטא את הנעשה במעבדה ולכן הוא כולל ראש גדול (פיל) מולקולת DNA מלופפת סביב הצוואר. בצד הגוף דמות עובר ברחם המבטא את השימוש בתאי גזע עובריים. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 16 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture16b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיצרתי עבור מעבדת הגנטיקה של מיכל ביתי בארה"ב.</h3>
+                        <p>הפסל אמור לבטא את הנעשה במעבדה.  גובה 98 ס"מ, משקל 8 ק"גץ</p>
+                    </div>
+                </div>
+
+<!-- יצירה 16 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture16c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיצרתי עבור מעבדת הגנטיקה של מיכל ביתי בארה"ב.</h3>
+                        <p>הפסל אמור לבטא את הנעשה במעבדה. בגב הפסל יצרתי את תמונת הגאון אלברט איינשטיין והנוסחה - האנרגיה שווה למכפלת המסה בריבוע מהירות האור. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 16 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture16d.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיצרתי עבור מעבדת הגנטיקה של מיכל ביתי בארה"ב.</h3>
+                        <p>הפסל אמור לבטא את הנעשה במעבדה. בצד הפסל יצרתי את הקטע מהציור של מיכאל אנג'לו בו נוגעות אצבעות אלוהים ואדם, מול הטענה שהגנטיקאים משחקים את אלוהים. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 17 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture17a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל נבל בדמות אישה.</h3>
+                        <p>יצרתי בהשראת פסל של נבל מאבן גרניט, בו האישה מהווה רק את העמוד. אני רציתי שכל הנבל יהיה מגוף האישה ורעמת שערה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 17 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture17b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל נבל בדמות אישה.</h3>
+                        <p>יצרתי מעץ סאפלי, את המיתרים יצרתי משיפודים חד פעמיים למנגל, היוצאים מגזיר ממקל מטאטא וצבעתי בלכה שקופה.. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 18 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture18.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ציפור דימיונית.</h3>
+                        <p>יצרתי בראשית דרכי בפיסול תלת מימדי וצבעתי בלכה שקופה.. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 19 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture19.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל של כלב.</h3>
+                        <p>יצרתי בראשית דרכי בפיסול תלת מימדי וצבעתי בלכה שקופה.. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 20 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture20.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל של ממותה.</h3>
+                        <p>יצרתי בראשית דרכי בפיסול מאותו גזע שיח שגדל בחצרי וצבעתי בלכה שקופה.. יצרתי ממותה ולא פיל כהתרסה מול אלפי פיסלי הפילים שנמכרים ברחובות אפריקה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 21 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture21.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל של צ'יטה רודפת אחרי צייד.</h3>
+                        <p>יצרתי בראשית דרכי בפיסול. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 22 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture22.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל של בתולת ים רוכבת על כריש.</h3>
+                        <p>יצרתי מעץ זית בהשראת האסון בחדרה בו כרישים טרפו בחור צעיר. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 23 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture23a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גיבור ישראל העצוב.</h3>
+                        <p>יצרתי מעץ זית בשנת 2023 השראת אסון השביעי באוקטובר. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 23 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture23b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גיבור ישראל העצוב.</h3>
+                        <p>הפסל בדמות גבר חזק וכפוף מעומס כל מדינת ישראל המונחת על גבו. פניו עצובים מהאובדן הכבד. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 23 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture23c.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל גיבור ישראל העצוב.</h3>
+                        <p>כאן ניתן לראות את כל מפת ארץ ישראל על גב הלוחם הגיבור. הצבתי אותו על בסיס מעץ ברוש ולוח מעץ אורן. על הלוח חרטתי את המילים - "אין לי ארץ אחרת, כאן ביתי".. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 24 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture24.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל דג.</h3>
+                        <p>יצרתי בתחילת דרכי מעץ תעשייתי מודבק, בהשראת עבודות דומות הנמכרות על חוף הים בג'מייקה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 25 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture25.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל לביאה.</h3>
+                        <p>יצרתי בתחילת דרכי בפיסול. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 26 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture26a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ינשוף.</h3>
+                        <p>יצרתי מאותו גזע שיח ענק שגדל בחצרי. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 26 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture26b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ינשוף.</h3>
+                        <p>יצרתי בתחילת דרכי בפיסול. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 27 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture27a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל סוס מזנק.</h3>
+                        <p>יצרתי בתחילת דרכי בפיסול. גובה 40 ס"מ. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 27 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture27b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל סוס מזנק.</h3>
+                        <p>יצרתי מאותו גזע שיח ענק שגדל בחצרי. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 28 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture28.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל סוס מזנק.</h3>
+                        <p>יצרתי מעץ קליר בתחילת דרכי בפיסול. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 29 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture29a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיח פורח.</h3>
+                        <p>יצרתי מעץ זית במשך 14 חודשי עבודה לסירוגין. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 29 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture29b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל שיח פורח.</h3>
+                        <p>יצרתי מעץ זית במשך 14 חודשי עבודה לסירוגין. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 30 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture30.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ציפור דימיונית.</h3>
+                        <p>יצרתי בתחילת דרכי בפיסול. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 31 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture30.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל קרנף.</h3>
+                        <p>הפסל התלת מימדי הראשון שיצרתי בחיי הבוגרים. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 32 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture32a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ראש סוס.</h3>
+                        <p>יצרתי מלוח עץ קליר שנתתי לו מעט ביטוי נפחי. צבוע בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 32 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture32b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל ראש סוס.</h3>
+                        <p>יצרתי בתחילת דרכי בפיסול. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 33 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture33a.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל סוריקטה</h3>
+                        <p>דמות הנמיה סוריקטה העומדת כזקיף ומשגיחה על השדה בו חברותיה מלקטות מזון. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 33 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture33b.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל סוריקטה</h3>
+                        <p>יצרתי מעץ זית וצבעתי בלכה שקופה. </p>
+                    </div>
+                </div>
+
+<!-- יצירה 34 -->
+                <div class="gallery-item sculpture">
+                    <img src="images/sculpture34.jpg" alt="פסל מעץ">
+                    <div class="item-info">
+                        <h3>פסל פילה ופילון</h3>
+                        <p>יצרתי מעץ קליר וצבעתי בלכה שקופה. </p>
+                    </div>
+                </div>
+
+
+                <!-- יצירה 2 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle1.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל אריה לנכדים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+  <!-- יצירה 3 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle2.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל מיקי ומיני מאוס לנכדים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle3.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל פרה לילדים קטנים</h3>
+                        <p>עץ קליר צבוע לכה בגוונים</p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle4.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תמונת הנכדה שלי - אלה</h3>
+                        <p>צילום מודבק על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle5a.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל לנכד שלי - דין</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle5b.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל לנכד שלי - דין</h3>
+                        <p>קופסה מעץ לבוד לאיחסון החלקים</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle5c.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל לנכד שלי - דין</h3>
+                        <p>קופסה מעץ לבוד לאיחסון החלקים עם ציור הפאזל להקלה בהרכבה</p>
+                    </div>
+                </div>
+
+
+<!-- יצירה 7 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle6.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל דינוזאור לימוד מספרים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 8 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle7.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל דרקון לימוד מספרים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 9 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle8.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל פינגווין</h3>
+                        <p>ציור שמן על עץ לבוד על פי ציור של הנכד שלי - אורי</p>
+                    </div>
+                </div>
+
+<!-- יצירה 10 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle9.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל שבשבת צבעים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 11 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle10.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל קטר</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle11a.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תמונת הנכד שלי - רון</h3>
+                        <p>צילום מודבק על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle11b.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תמונת הנכד שלי - רון</h3>
+                        <p>קופסה מעץ לבוד לאיחסון החלקים.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle11c.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תמונת הנכד שלי - רון</h3>
+                        <p>קופסה מעץ לבוד לאיחסון החלקים עם צילום הפאזל להקלה בהרכבה.</p>
+                    </div>
+                </div>
+
+
+<!-- יצירה 13 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle12.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תום וג'רי גירסה 1</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 14 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle13.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תום וג'רי גירסה 2</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 15 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle14.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                        <h3>פאזל תמונת הנכד שלי - תום</h3>
+                        <p>צילום מודבק על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 16 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle15.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל הכלב פלוטו - 20 חלקים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 17 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle16.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל הכלב פלוטו - 30 חלקים</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 18 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle17.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                         <h3>פאזל דונלדאק</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 19 -->
+                <div class="gallery-item puzzles-kids">
+                    <img src="images/puzzle18.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל בלואי</h3>
+                        <p>ציור שמן על עץ לבוד</p>
+                    </div>
+                </div>
+
+<!-- יצירה 20 -->
+                <div class="gallery-item puzzles-decor">
+                    <img src="images/puzzle19.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל צב</h3>
+                        <p>עץ אלון צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 21 -->
+                <div class="gallery-item puzzles-decor">
+                    <img src="images/puzzle20.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל ליוויתנים</h3>
+                        <p>עץ אלון צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 22 -->
+                <div class="gallery-item puzzles-decor">
+                    <img src="images/puzzle21.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל ליוויתנים עם בסיס</h3>
+                        <p>עץ אלון צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 23 -->
+                <div class="gallery-item puzzles-decor">
+                    <img src="images/puzzle22.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל סנאי</h3>
+                        <p>עץ מהוגני צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 24 -->
+                <div class="gallery-item puzzles-hot">
+                    <img src="images/puzzle23.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל משחק ליוויתנים להנחת כלי חם על השולחן</h3>
+                        <p>עץ אלון צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 25 -->
+                <div class="gallery-item puzzles-hot">
+                    <img src="images/puzzle24.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל משחק אנפה להנחת כלי חם על השולחן</h3>
+                        <p>עץ אורן צרוב צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 26 -->
+                <div class="gallery-item puzzles-hot">
+                    <img src="images/puzzle25.jpg" alt="פאזל לילדים">
+                    <div class="item-info">
+                           <h3>פאזל משחק פרפר להנחת כלי חם על השולחן</h3>
+                        <p>עץ זית צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 1 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful1a.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>ספסל למרפסת.</h3>
+                        <p>מושב מלוח עץ ברוש ובסיס מגזע עץ אקליפטוס, צבוע בלכה שקופה</p>
+                    </div>
+                </div>
+
+<!-- יצירה 1 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful1b.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>ספסל למרפסת.</h3>
+                        <p>אחת מיצירותי הראשונות בשנת 2014.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful2a.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>כד לאחסנת כלי כתיבה, פרחי בד או שלטים לטלביזיה.</h3>
+                        <p>כד בנוסח הכלים ממשתה התה של הארנב הכובען המשוגע בסיפור עליזה בארץ הפלאות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful2b.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>כד לאחסנת כלי כתיבה, פרחי בד או שלטים לטלביזיה.</h3>
+                        <p>יצרתי מעץ פיקוס. גובה 30 ס"מ, משקל 2.7 ק"ג.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful3a.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>פסל סנאי לאחסנת כלי כתיבה או שלטים לטלביזיה.</h3>
+                        <p>יצרתי מעץ איזדרכת. גובה 32 ס"מ.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful3b.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>פסל סנאי לאחסנת כלי כתיבה או שלטים לטלביזיה.</h3>
+                        <p>במקור רציתי לפסל קנגורו עם כיס אבל העץ לא הספיק אז יצרתי סנאי או עכבר מחזיק גביע.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful3c.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>פסל סנאי לאחסנת כלי כתיבה או שלטים לטלביזיה.</h3>
+                        <p>צבוע בלכה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful4a.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות הענק אטלס.</h3>
+                        <p>בהשראת הענק אטלס הנושא את העולם על כתפיו, יצרתי ענק הנושא את פח השמן.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful4b.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות הענק אטלס.</h3>
+                        <p>יצרתי מעץ סאפלי עם פמוטי נירוסטה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful5.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות שיח גפן.</h3>
+                        <p>יצרתי מעץ פיקוס עם פמוטי זכוכית. צבוע בפוליטורה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful6a.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות שיח פורח.</h3>
+                        <p>יצרתי מעץ עם פמוטי זכוכית. צבוע בלכה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful6b.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות שיח פורח.</h3>
+                        <p>גובה 44 ס"מ, משקל 4.1 ק"ג.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item sculpture-useful">
+                    <img src="images/sculpture-useful6c.jpg" alt="פסלים שימושיים מעץ">
+                    <div class="item-info">
+                           <h3>חנוכיה בדמות שיח פורח.</h3>
+                        <p>השיח מתפתל ועל כל עלה עומד נר, כשהשמש במרכז הפרח.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 1 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood1.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>תמונת ינשוף.</h3>
+                        <p>חרוט בלוח עץ ומסגרת פשוטה שיצרתי לבד מגרוטאות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood2.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>תמונת אנטילופה והגור הצעיר שלה יונק ממנה.</h3>
+                        <p>חרוט בלוח עץ ומסגרת פשוטה קנויה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood3.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>סמל חברת טורטוגה למכירת ציוד לטיולים שבני היה שותף להקמתה.</h3>
+                        <p>חרוט בפרוסת עץ אורן וצבוע בלכה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood4.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>תמונה שיצרתי בהשראת פסל השור הענק ליד הבורסה בניו-יורק.</h3>
+                        <p>חרוט בפרוסת עץ אורן וצבוע בלכה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood5.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>כינור דוד שיצרתי בדומה ליצירות דומות שראיתי בארץ</h3>
+                        <p>השתמשתי במיתרי גיטרה צעצוע וחרוזי זכוכית. צבוע בלכה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood6.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>עדר פילים</h3>
+                        <p>יצרתי מלוח עץ סאפלי. צבוע בפוליטורה שקופה.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item photos-wood">
+                    <img src="images/photos-wood7.jpg" alt="תמונות מעץ">
+                    <div class="item-info">
+                           <h3>שועל, תן או זאב מילל אל הירח</h3>
+                        <p>יצרתי מלוח עץ סאפלי. צבוע בפוליטורה שקופה.</p>
+                    </div>
+                </div>
+
+
+                <!-- יצירה 1 -->
+                <div class="gallery-item oil-paintings">
+                    <img src="images/painting1.jpg" alt="ציור שמן">
+                    <div class="item-info">
+                        <h3>ציור של קקאשי - הגיבור מסדרת הטלביזיה נארוטו.</h3>
+                        <p>צבעי שמן על לוח עץ/ 53X40 ס"מ.</p>
+                    </div>
+                </div>
+
+       <!-- יצירה 2 -->
+                <div class="gallery-item oil-paintings">
+                    <img src="images/painting2a.jpg" alt="ציור שמן">
+                    <div class="item-info">
+                        <h3>ציור של סאסקה - הגיבור מסדרת הטלביזיה נארוטו.</h3>
+                        <p>צבעי שמן על לוח עץ. גובה 80 ס"מ.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item oil-paintings">
+                    <img src="images/painting2b.jpg" alt="ציור שמן">
+                    <div class="item-info">
+                        <h3>ציור של סאסקה - הגיבור מסדרת הטלביזיה נארוטו.</h3>
+                        <p>צבעי שמן על לוח עץ. גובה 80 ס"מ.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item oil-paintings">
+                    <img src="images/painting2c.jpg" alt="ציור שמן">
+                    <div class="item-info">
+                        <h3>ציור של סאסקה - הגיבור מסדרת הטלביזיה נארוטו.</h3>
+                        <p>צבעי שמן על לוח עץ. גובה 80 ס"מ.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 1 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden1.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות דחליל על הגדר</h3>
+                        <p>צבעי שמן על לוח עץ לבוד.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 2 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden2.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות חסידה</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 3 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden3.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות עוף כפן</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות ומשויף ליצירת תלת מיימד מסוים.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 4 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden4.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות עוף נקר</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 5 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden5.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות זוג סיקסקים על הגג</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 6 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden6.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות פלמינגו</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 7 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden7.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות זוג פלמינגו</h3>
+                        <p>צבעי שמן משני הצדדים, על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 8 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden8.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות קיפוד על הגדר</h3>
+                        <p>צבעי שמן , על לוח עץ לבוד מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 9 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden9.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות שקנאי מצויר</h3>
+                        <p>צבעי שמן , על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 10 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden10.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות זוג תוקים ציבעוניים</h3>
+                        <p>צבעי שמן , על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 11 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden11.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות תוקן ציבעוני על הגג</h3>
+                        <p>צבעי שמן , על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+<!-- יצירה 12 -->
+                <div class="gallery-item garden">
+                    <img src="images/garden12.jpg" alt="קישוטים לגינה">
+                    <div class="item-info">
+                        <h3>דמות תוקן ציבעוני על הגזיבו</h3>
+                        <p>צבעי שמן , על לוח עץ מלא מנוסר לדמות.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- מדור יצירת קשר -->
+        <section id="contact" class="section">
+            <h2>יצירת קשר</h2>
+            <div class="contact-info">
+                <p>אהבתם את היצירות? מוזמנים לדבר איתי, לשאול שאלות או לתאם ביקור בזכרון יעקב.</p>
+                <p><strong>גדי לוי</strong></p>
+                <a href="#" class="contact-link">שלחו לי הודעה בווצאפ</a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
