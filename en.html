@@ -143,7 +143,7 @@
         <p>A digital gallery of sculptures, 3D puzzles, and paintings</p>
     </header>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 2rem;">
+    <nav>
         <div style="flex-grow: 1; text-align: center;">
             <a href="#about">My Story</a>
             <a href="#gallery">My Gallery</a>
@@ -158,39 +158,57 @@
 
     <div class="container">
 
-        <!-- Here you can paste your stories/gallery items when we translate them -->
+        <section id="about" class="section">
+            <h2>My Story</h2>
+            <p>Welcome to my digital gallery. Here you can explore a variety of artworks created with passion and love over the years—unique wood sculptures, intricate 3D puzzles, and paintings.</p>
+            <p class="highlight">Artistry crafted in wood, capturing imagination and geometry.</p>
+        </section>
 
-        <!-- Guestbook & Contact Section -->
-<section id="contact-section" class="section" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px; scroll-margin-top: 30px;">
-    <h2>Guestbook & Comments</h2>
-    <p style="font-size: 18px; margin-bottom: 20px;">You are welcome to leave your impressions, thoughts, or a warm note about the artworks!</p>
-    
-    <!-- Button to open the Google Form -->
-    <a href="https://docs.google.com/forms/d/1QehsCYPMirx5dMVfPF_K4CSt97bWr59XjQpo7mXTeQE/viewform" target="_blank" style="display: inline-block; background-color: #007bff; color: white; padding: 14px 28px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,123,255,0.2); transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='scale(1)'">
-        ✍️ Click here to write a new comment
-    </a>
+        <section id="gallery" class="section">
+            <h2>My Gallery</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterGallery('all')">All Artworks</button>
+                <button class="filter-btn" onclick="filterGallery('sculptures')">Sculptures</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles')">3D Puzzles</button>
+                <button class="filter-btn" onclick="filterGallery('paintings')">Paintings</button>
+            </div>
 
-    <h3 style="margin-top: 20px; margin-bottom: 15px;">Recent Comments:</h3>
-    
-    <!-- Embedded Google Sheet Table -->
-    <div style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJW_dJN4gMiroHSy3VmkB_OGC2gg3MiX0TvmKv6hhLvzvgGQuvuIlRjoJGBeIeiGduHUZSoC7F9R_N/pubhtml?widget=true&amp;headers=false" style="width: 100%; height: 400px; border: none;"></iframe>
-    </div>
-</section>
+            <div class="gallery-grid">
+                <p style="text-align: center; color: #666; font-style: italic;">Artwork details coming soon...</p>
+            </div>
+        </section>
 
-    <section id="contact" class="section" style="text-align: center;">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <p>Did you like the artworks? You are welcome to contact me, ask questions, or schedule a visit.</p>
-            <p><strong>Gadi Levy</strong></p>
-            <!-- WhatsApp button connected to your number -->
-            <a href="https://wa.me/972548118865" target="_blank" class="contact-link" style="display: inline-block; margin-top: 15px; padding: 12px 28px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#1ebd59'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#25D366'; this.style.transform='scale(1)'">
-                💬 Send me a WhatsApp message
+        <section id="contact-section" class="section" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px; scroll-margin-top: 30px;">
+            <h2>Guestbook & Comments</h2>
+            <p style="font-size: 18px; margin-bottom: 20px;">You are welcome to leave your impressions, thoughts, or a warm note about the artworks!</p>
+            
+            <a href="https://docs.google.com/forms/d/1QehsCYPMirx5dMVfPF_K4CSt97bWr59XjQpo7mXTeQE/viewform" target="_blank" style="display: inline-block; background-color: #007bff; color: white; padding: 14px 28px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,123,255,0.2); transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#007bff'; this.style.transform='scale(1)'">
+                ✍️ Click here to write a new comment
             </a>
-        </div>
-    </section>
+
+            <h3 style="margin-top: 20px; margin-bottom: 15px;">Recent Comments:</h3>
+            
+            <div style="border: 1px solid #ccc; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJW_dJN4gMiroHSy3VmkB_OGC2gg3MiX0TvmKv6hhLvzvgGQuvuIlRjoJGBeIeiGduHUZSoC7F9R_N/pubhtml?widget=true&amp;headers=false" style="width: 100%; height: 400px; border: none;"></iframe>
+            </div>
+        </section>
+
+        <section id="contact" class="section" style="text-align: center;">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Did you like the artworks? You are welcome to contact me, ask questions, or schedule a visit to Zichron Yaakov.</p>
+                <p><strong>Gadi Levy</strong></p>
+                <a href="https://wa.me/972548118865" target="_blank" class="contact-link" style="display: inline-block; margin-top: 15px; padding: 12px 28px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#1ebd59'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#25D366'; this.style.transform='scale(1)'">
+                    💬 Send me a WhatsApp message
+                </a>
+                <a href="mailto:gady100@gmail.com" class="contact-link" style="display: inline-block; margin: 10px; padding: 12px 28px; background-color: #007bf3; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s, transform 0.2s;" onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.02)'" onmouseout="this.style.backgroundColor='#007bf3'; this.style.transform='scale(1)'">📧 Send me an Email</a>
+            </div>
+        </section>
 
     </div>
+
+    <div style="margin-bottom: 400px;"></div>
 
     <script>
         function filterGallery(category) {
