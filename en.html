@@ -158,27 +158,642 @@
 
     <div class="container">
 
+        <!-- My Story Section -->
         <section id="about" class="section">
             <h2>My Story</h2>
             <p>Welcome to my digital gallery. Here you can explore a variety of artworks created with passion and love over the years—unique wood sculptures, intricate 3D puzzles, and paintings.</p>
             <p class="highlight">Artistry crafted in wood, capturing imagination and geometry.</p>
         </section>
 
+        <!-- Gallery Section -->
         <section id="gallery" class="section">
             <h2>My Gallery</h2>
             
+            <!-- Filter Buttons -->
             <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterGallery('all')">All Artworks</button>
-                <button class="filter-btn" onclick="filterGallery('sculptures')">Sculptures</button>
-                <button class="filter-btn" onclick="filterGallery('puzzles')">3D Puzzles</button>
-                <button class="filter-btn" onclick="filterGallery('paintings')">Paintings</button>
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('sculpture')">Wood Sculptures</button>
+                <button class="filter-btn" onclick="filterGallery('sculpture-useful')">Useful Wood Sculptures</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-kids')">Playable Puzzles</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-hot')">Puzzles for Hot Dishes</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-decor')">Decorative Puzzles</button>
+                <button class="filter-btn" onclick="filterGallery('photos-wood')">Wood Pictures</button>
+                <button class="filter-btn" onclick="filterGallery('oil-paintings')">Oil Paintings</button>
+                <button class="filter-btn" onclick="filterGallery('garden')">Garden Ornaments</button>
             </div>
 
             <div class="gallery-grid">
-                <p style="text-align: center; color: #666; font-style: italic;">Artwork details coming soon...</p>
+                
+                <!-- Artwork 1 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture1a.jpg" alt="Wood Sculpture - Main View">
+                    <div class="item-info">
+                        <h3>Woman's Head Sculpture Dedicated to Breast Cancer Survivors</h3>
+                        <p>Handcrafted in the backyard gazebo | Wood type: Pine</p>
+                        <p style="margin-top: 15px; color: #555; font-size: 0.9rem;">
+                            During the sculpting process, when I reached the chest, I realized there wasn't enough material. On the breast stump, I inscribed the words "I am a survivor" and carved the breast cancer awareness ribbon, which years later also became the symbol for the hostages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Artwork 1b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture1b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Woman's Head Sculpture Dedicated to Breast Cancer Survivors</h3>
+                        <p>Side view of the handcrafted pine sculpture.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 1c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture1c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Woman's Head Sculpture Dedicated to Breast Cancer Survivors</h3>
+                        <p>The inscription carved onto the missing breast stump. Height: 65 cm, Weight: 42 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 2a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture2a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Man Torn Between His Desires</h3>
+                        <p>Created from Rosewood (Sissoo) that naturally split. The crack inspired the idea of a man debating between his good and evil inclinations. I placed an angel on his right shoulder and a demon on his left shoulder to represent these inner drives.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 2b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture2b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Man Torn Between His Desires</h3>
+                        <p>The Rosewood features distinct layers, with a dark core and a light outer shell—another motif expressing inner conflict. The demon riding his left shoulder is clearly visible here. Height: 54 cm, Weight: 15 kg (excluding base).</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 2c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture2c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Man Torn Between His Desires</h3>
+                        <p>Here the angel on the right shoulder can be seen. The man covers his face with his hands in despair.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 2d -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture2d.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Man Torn Between His Desires</h3>
+                        <p>The sculpture shown on its base, which I purchased in Daliat el-Carmel, also crafted from Rosewood.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 3a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture3a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Coffee Table with an Embryo in the Womb</h3>
+                        <p>Crafted over 5 months from a slice of a pine tree trunk purchased in Moshav Nataf. Topped with a circular tempered glass pane.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 3b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture3b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Coffee Table with an Embryo in the Womb</h3>
+                        <p>A view of the table with its (detached) legs. Maximum diameter: 75 cm, Height: 40 cm, Weight: 32 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 4a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture4a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Slender Woman Sculpture</h3>
+                        <p>I created this piece from an oak beam originally intended to be a table leg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 4b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture4b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Slender Woman Sculpture</h3>
+                        <p>Front view. I gave her dress a high slit so it wouldn't be mistaken for a sculpture with religious connotations.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 5a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture5a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>African Bird Sculpture</h3>
+                        <p>In South Africa, I saw a large black bird, bigger than a pigeon, drinking nectar from aloe vera flowers, much like the Israeli sunbird. I recreated it in wood and painted it black.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 5b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture5b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>African Bird Sculpture</h3>
+                        <p>Front view. Height: 38 cm including the base.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 6a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture6a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Gorilla Holding Her Baby</h3>
+                        <p>It took me a week just to capture the maternal look on her face, and two months of intensive work to complete the entire piece.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 6b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture6b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Gorilla Holding Her Baby</h3>
+                        <p>Made from yellow Royal Poinciana wood, finished with a transparent black varnish. Height: 53 cm, Weight: 34 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 6c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture6c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Gorilla Holding Her Baby</h3>
+                        <p>The sculpture displayed on its base.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 7a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture7a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Men Cry at Night</h3>
+                        <p>Inspired by the song by Avner Gadassi. I created a macho mask with an expressionless face, yet tears stream from its eyes.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 7b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture7b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Men Cry at Night</h3>
+                        <p>Yellow Royal Poinciana wood coated with transparent varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 8a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture8a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Leopard Sculpture</h3>
+                        <p>Crafted from an unidentified wood type, finished with clear varnish. Height: 76 cm, Weight: 25 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 8b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture8b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Leopard Sculpture</h3>
+                        <p>Everyone sees a different animal in it—a leopard, a dog, a bear. The main thing is that they love it.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 9a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture9a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Bald American Eagle Diving for Three Fish</h3>
+                        <p>Inspired by the magnificent sight of these massive birds diving for salmon in Alaska.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 9b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture9b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Bald American Eagle Diving for Three Fish</h3>
+                        <p>White Royal Poinciana wood. Fortunately, the natural texture of the wood perfectly matched the eagle's white neck and dark body. Finished with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 9c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture9c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Bald American Eagle Diving for Three Fish</h3>
+                        <p>An alternative view of the eagle sculpture.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 10a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture10a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The People of Israel Fighting Terrorism</h3>
+                        <p>I represented the people of Israel as a dove of peace holding an olive branch in its beak. The Hamas snake emerging from its burrow bites her, and she pierces it with her sword. Carved into the base are the words: "I have no other land."</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 10b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture10b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The People of Israel Fighting Terrorism</h3>
+                        <p>Created in October 2023, inspired by the national tragedy. This piece is featured in the "I Have No Other Land" exhibition at Yad Labanim in Or Yehuda.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 11a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture11a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Creation vs. Evolution</h3>
+                        <p>Evolution is depicted here as two DNA molecules, with each sphere representing an atom. Primitive creatures like starfish, squid, and jellyfish emerge from the molecules, followed by insects, fish, dinosaurs, and mammals, totaling 20 animals. At the base, a man and a woman are in a birth position, with God's lightning striking each of their heads.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 11b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture11b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Creation vs. Evolution</h3>
+                        <p>The entire piece is carved out of a single block of wood. It took 14 months of dedicated work to complete.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 11c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture11c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Creation vs. Evolution</h3>
+                        <p>Finished with a protective layer of clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 12a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture12a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Woman Washing Her Hair in the River</h3>
+                        <p>Coated with transparent varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 12b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture12b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Woman Washing Her Hair in the River</h3>
+                        <p>I carved this piece from a burnt log that was rolling around yards in Ramat Yishai.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 12c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture12c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Woman Washing Her Hair in the River</h3>
+                        <p>Inspired by a film I watched. Height: 42 cm, Weight: 9 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 13a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture13a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Dancing Woman</h3>
+                        <p>The twists in the tree trunk looked to me like the blowing hair and flowing dress of a dancer, and that is exactly how it turned out.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 13b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture13b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Dancing Woman</h3>
+                        <p>Yellow Royal Poinciana wood finished with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 14a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture14a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Living Room Table with a Base Shaped Like a Grazing Horse</h3>
+                        <p>Yellow Royal Poinciana wood with clear varnish. Fitted with an elliptical tempered glass top measuring 80x55 cm.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 14b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture14b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Living Room Table with a Base Shaped Like a Grazing Horse</h3>
+                        <p>The table displayed in my son Eran's home in Haifa.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 15a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture15a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Imaginary Figure with a Female Half-Body flanked by a Snake and a Fish</h3>
+                        <p>Carved from the trunk of a bush in my yard that grew to intimidating proportions.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 15b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture15b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Imaginary Figure with a Female Half-Body flanked by a Snake and a Fish</h3>
+                        <p>Created over 4 months of work. Height: 75 cm, Weight: 8 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 16a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture16a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Sculpture Created for My Daughter Michal's Genetics Lab in the USA</h3>
+                        <p>Designed to represent the laboratory's work, it features a large head (intellect) and a DNA molecule wrapped around the neck. On the side, an embryo in the womb signifies the use of embryonic stem cells.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 16b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture16b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Sculpture Created for My Daughter Michal's Genetics Lab in the USA</h3>
+                        <p>Reflecting scientific endeavor. Height: 98 cm, Weight: 8 kg.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 16c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture16c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Sculpture Created for My Daughter Michal's Genetics Lab in the USA</h3>
+                        <p>On the back, I carved a portrait of Albert Einstein alongside his formula, E=mc².</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 16d -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture16d.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Sculpture Created for My Daughter Michal's Genetics Lab in the USA</h3>
+                        <p>Features a section inspired by Michelangelo's 'The Creation of Adam', where the fingers of God and man touch—contrasting with the notion of geneticists playing God.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 17a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture17a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Harp in the Image of a Woman</h3>
+                        <p>Inspired by a granite harp sculpture where the woman is merely the pillar. I wanted the entire harp to emerge from the woman's body and her flowing mane of hair.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 17b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture17b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Harp in the Image of a Woman</h3>
+                        <p>Crafted from Sapele wood. The strings are made from barbecue skewers attached to a broomstick segment. Finished with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 18 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture18.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Imaginary Bird</h3>
+                        <p>One of my early steps into 3D sculpting, coated with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 19 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture19.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Dog Sculpture</h3>
+                        <p>An early sculptural piece, finished with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 20 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture20.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Mammoth Sculpture</h3>
+                        <p>Carved early in my journey from the same giant yard bush trunk. I chose a mammoth over an elephant as a playful contrast to the thousands of elephant carvings sold throughout Africa.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 21 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture21.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Cheetah Chasing a Hunter</h3>
+                        <p>An early experimental work from the beginning of my sculpting journey.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 22 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture22.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Mermaid Riding a Shark</h3>
+                        <p>Made from Olive wood, inspired by the tragedy in Hadera where a young man was attacked by sharks. Coated in clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 23a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture23a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Sorrowful Israeli Hero</h3>
+                        <p>Carved from Olive wood in 2023, reflecting on the events of October 7th. Coated with clear varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 23b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture23b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Sorrowful Israeli Hero</h3>
+                        <p>Depicts a powerful yet bent figure, bearing the immense weight of the entire State of Israel upon his back, his face heavy with deep loss.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 23c -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture23c.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>The Sorrowful Israeli Hero</h3>
+                        <p>Shows the entire map of Israel etched onto the hero's back. Set on a Cypress wood base with a Pine plaque inscribed with the words: "I have no other land, here is my home."</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 24 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture24.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Fish Sculpture</h3>
+                        <p>An early piece made from laminated industrial wood, inspired by similar art sold on the beaches of Jamaica.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 25 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture25.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Lioness Sculpture</h3>
+                        <p>One of my very first creations at the start of my sculpting path.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 26a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture26a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Owl Sculpture</h3>
+                        <p>Carved from that same massive bush trunk from my yard, finished with a transparent coat.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 26b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture26b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Owl Sculpture</h3>
+                        <p>Another early decorative piece from the beginning of my woodwork.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 27a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture27a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Leaping Horse</h3>
+                        <p>An early decorative horse sculpture. Height: 40 cm.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 27b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture27b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Leaping Horse</h3>
+                        <p>Carved from the giant yard bush trunk and finished with transparent varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 28 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture28.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Leaping Horse</h3>
+                        <p>Crafted from clear pine wood in my early sculpting days. Transparent varnish finish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 29a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture29a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Blooming Bush</h3>
+                        <p>An intricate piece carved from Olive wood over 14 months of intermittent work. Clear varnish finish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 29b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture29b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Blooming Bush</h3>
+                        <p>Another view highlighting the detailed grain of the Olive wood.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 30 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture30.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Imaginary Bird</h3>
+                        <p>An early piece exploring organic and flowing shapes. Coated with transparent varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 31 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture30.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Rhinoceros Sculpture</h3>
+                        <p>The very first three-dimensional sculpture I ever created in my adult life. Clear varnish finish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 32a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture32a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Horse's Head</h3>
+                        <p>Created from a clear pine board, adding subtle volumetric expression. Finished with a transparent coat.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 32b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture32b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Horse's Head</h3>
+                        <p>An alternative view from my early woodwork gallery.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 33a -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture33a.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Meerkat Sculpture</h3>
+                        <p>The figure of a meerkat standing as a sentinel, guarding the area while its companions forage for food.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 33b -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture33b.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Meerkat Sculpture</h3>
+                        <p>Carved from Olive wood and coated with transparent varnish.</p>
+                    </div>
+                </div>
+
+                <!-- Artwork 34 -->
+                <div class="gallery-item sculpture">
+                    <img src="sculpture34.jpg" alt="Wood Sculpture">
+                    <div class="item-info">
+                        <h3>Elephant and Calf</h3>
+                        <p>Crafted from clear pine wood, finished with a transparent varnish.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
+        <!-- Guestbook & Contact Section -->
         <section id="contact-section" class="section" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px; scroll-margin-top: 30px;">
             <h2>Guestbook & Comments</h2>
             <p style="font-size: 18px; margin-bottom: 20px;">You are welcome to leave your impressions, thoughts, or a warm note about the artworks!</p>
