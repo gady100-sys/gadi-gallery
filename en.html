@@ -1049,18 +1049,20 @@
 
     <script>
         function filterGallery(category) {
+            // מעדכן את הכפתור הפעיל
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
 
+            // מסנן את הפריטים ומשאיר אותם בתוך הרשת האלסטית
             const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block';
-                } else if (item.classList.contains(category)) {
-                    item.style.display = 'block';
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = ''; // מאפס ומחזיר להתנהגות ברירת המחדל של הרשת
                 } else {
-                    item.style.display = 'none';
+                    item.style.display = 'none'; // מסתיר את מה שלא שייך לקטגוריה
                 }
             });
         }
