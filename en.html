@@ -1046,7 +1046,7 @@
 
     </div>
 
-    <div style="margin-bottom: 400px;"></div>
+<div style="margin-bottom: 400px;"></div>
 
     <script>
         function filterGallery(category) {
@@ -1061,14 +1061,13 @@
             const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
                 if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = ''; // מאפס ומחזיר להתנהגות ברירת המחדל של הרשת
+                    item.style.display = 'grid'; // מכריח את התמונות להישאר מסודרות בשורות של הרשת
                 } else {
                     item.style.display = 'none'; // מסתיר את מה שלא שייך לקטגוריה
                 }
             });
         }
     </script>
-
     <div id="lightbox" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); text-align: center; align-items: center; justify-content: center; cursor: pointer;">
         <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
         <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; margin: auto; border: 3px solid white; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2);">
