@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gadi Levy – Wood Artistry</title>
-    <style>
+ <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f9f6f0; 
@@ -83,20 +83,19 @@
             color: white;
         }
 
+        /* כאן הגדרנו את הרשת שתמיד תכריח את התמונות להסתדר בשורות */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+            gap: 20px !important;
         }
-       .gallery-item {
-       background: #fff;
-       border: 1px solid #e6dfd3;
-       border-radius: 6px;
-       overflow: hidden;
-       box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-       transition: transform 0.3s ease;
-       width: 100% !important;
-   }
+        .gallery-item {
+            background: #fff;
+            border: 1px solid #e6dfd3;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
