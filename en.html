@@ -1057,13 +1057,15 @@
                 event.target.classList.add('active');
             }
 
-            // מסנן את הפריטים ומשאיר אותם בתוך הרשת האלסטית
+            // מסנן את הפריטים בדיוק כמו בגרסה העברית
             const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'grid'; // מכריח את התמונות להישאר מסודרות בשורות של הרשת
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block';
                 } else {
-                    item.style.display = 'none'; // מסתיר את מה שלא שייך לקטגוריה
+                    item.style.display = 'none';
                 }
             });
         }
