@@ -156,8 +156,52 @@
 
     <div class="container">
         
-        <!-- מדור אודות -->
+ <!-- מדור אודות -->
     <section id="about" class="section">
+        <!-- קוד עיצוב מובנה לפתרון מהיר של הגודל והטורים -->
+        <style>
+            .about-container {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                align-items: flex-start;
+                margin-top: 30px;
+            }
+            .about-text {
+                flex: 2;
+                text-align: justify;
+            }
+            .about-images {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                min-width: 280px;
+            }
+            .about-img {
+                width: 100%;
+                max-width: 300px; /* קובע שהתמונות לא יהיו ענקיות בשום מצב */
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            .about-img:hover {
+                transform: scale(1.02);
+            }
+            @media (max-width: 768px) {
+                .about-container {
+                    flex-direction: column-reverse;
+                    gap: 20px;
+                }
+                .about-images {
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+        </style>
+
         <h2>נעים להכיר, אני גדי לוי</h2>
         
         <div class="about-container">
@@ -173,7 +217,7 @@
                 <p>לאחר שהצגתי את עבודותיי במסגרת "בתים פתוחים" בזכרון יעקב וזכיתי לשתף את היצירה שלי עם מאות מבקרים, אני נרגש לפתוח את הדלתות של הגלריה הדיגיטלית הזו בפניכם.</p>
             </div>
             
-            <!-- טור התמונות המעודכן -->
+            <!-- טור התמונות -->
             <div class="about-images">
                 <img src="gadi1.jpg" alt="גדי לוי - פרופיל" class="about-img profile-img">
                 <img src="gadi2.jpg" alt="גדי לוי בעבודה על בול עץ" class="about-img work-img">
