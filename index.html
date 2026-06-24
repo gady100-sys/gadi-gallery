@@ -225,7 +225,7 @@
         </div>
     </section>
 
-        <!-- מדור גלריה -->
+<!-- מדור גלריה -->
         <section id="gallery" class="section">
             <h2>הגלריה שלי</h2>
             
@@ -233,17 +233,27 @@
                 <button class="filter-btn active" onclick="filterGallery('all')">הכל</button>
                 <button class="filter-btn" onclick="filterGallery('sculpture')">פסלים מעץ</button>
                 <button class="filter-btn" onclick="filterGallery('sculpture-useful')">פסלים שימושיים מעץ</button>
-              <button class="filter-btn" onclick="filterGallery('puzzles-kids')">פאזלים למשחק</button>
+                <button class="filter-btn" onclick="filterGallery('puzzles-kids')">פאזלים למשחק</button>
                 <button class="filter-btn" onclick="filterGallery('puzzles-hot')">פאזלים לכלי חם</button>
                 <button class="filter-btn" onclick="filterGallery('puzzles-decor')">פאזלים לקישוט</button>
                 <button class="filter-btn" onclick="filterGallery('photos-wood')">תמונות מעץ</button>
-              <button class="filter-btn" onclick="filterGallery('oil-paintings')">ציורי שמן</button>
-             <button class="filter-btn" onclick="filterGallery('garden')">קישוטים לגינה</button>
-<button class="filter-btn" onclick="filterGallery('boy')">יצירות שיצרתי בילדותי</button>
-                
-        </div>
+                <button class="filter-btn" onclick="filterGallery('oil-paintings')">ציורי שמן</button>
+                <button class="filter-btn" onclick="filterGallery('garden')">קישוטים לגינה</button>
+                <button class="filter-btn" onclick="filterGallery('mobiles')">מוביילים</button>
+                <button class="filter-btn" onclick="filterGallery('birdhouses')">שובכים לציפורים</button>
+                <button class="filter-btn" onclick="filterGallery('boy')">יצירות שיצרתי בילדותי</button>
+            </div>
 
             <div class="gallery-grid">
+                <!-- דוגמה להוספת תמונות המוביילים החדשות -->
+                <div class="gallery-item mobiles" onclick="openLightbox('mobile1a.jpg', 'מובייל מעץ')">
+                    <img src="mobile1a.jpg" alt="מובייל מעץ">
+                </div>
+                
+                <!-- דוגמה להוספת תמונות השובכים החדשות (לוודא שיש .jpg בסוף שם הקובץ ב-GitHub) -->
+                <div class="gallery-item birdhouses" onclick="openLightbox('nest1a.jpg', 'שובך לציפורים מעץ')">
+                    <img src="nest1a.jpg" alt="שובך לציפורים מעץ">
+                </div>
                 
                 <!-- יצירה 1 -->
                 <div class="gallery-item sculpture">
