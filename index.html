@@ -1619,7 +1619,7 @@
             מבחר רגעים, זכרונות ומפגשים מתוך תערוכות שונות בהן זכיתי להציג ולשתף את יצירותיי עם הקהל הרחב.
         </p>
 
-        <style>
+      <style>
             .exhibition-group {
                 margin-bottom: 40px;
                 background: #fdfbf7;
@@ -1636,8 +1636,8 @@
             }
             .exhibition-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                gap: 15px;
+                grid-template-columns: repeat(3, 1fr); /* מאלץ בדיוק 3 בשורה */
+                gap: 20px;
             }
             .exhibition-item {
                 position: relative;
@@ -1645,17 +1645,26 @@
                 border-radius: 6px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
                 background: #fff;
-                aspect-ratio: 4 / 3;
+                /* הסרנו את ה-aspect-ratio כדי למנוע חיתוך בגובה */
             }
             .exhibition-item img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.3s ease;
+                height: auto; /* שומר על הגובה המקורי והטבעי של התמונה */
                 display: block;
+                transition: transform 0.3s ease;
             }
             .exhibition-item img:hover {
-                transform: scale(1.05);
+                transform: scale(1.03);
+            }
+            @media (max-width: 768px) {
+                .exhibition-grid {
+                    grid-template-columns: repeat(2, 1fr); /* במסכים קטנים זה ירד ל-2 בשורה */
+                }
+            }
+            @media (max-width: 480px) {
+                .exhibition-grid {
+                    grid-template-columns: 1fr; /* בטלפונים קטנים שורה בודדת */
+                }
             }
         </style>
 
