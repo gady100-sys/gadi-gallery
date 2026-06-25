@@ -139,96 +139,12 @@
 </head>
 <body>
 
-<header>
-        <h1>Gadi Levy – Wood Artistry</h1>
-        <p>A digital gallery of sculptures, 3D puzzles, and paintings</p>
-    </header>
-
-    <nav>
-        <div style="flex-grow: 1; text-align: center;">
-            <a href="#about">My Story</a>
-            <a href="#gallery">My Gallery</a>
-            <a href="#contact-section">Contact Me</a>
-        </div>
-        <div style="font-size: 0.9rem; font-family: sans-serif; white-space: nowrap;">
-            <a href="index.html" style="color: #e6dfd3; text-decoration: none; font-weight: normal; margin-left: 5px;">עברית</a>
-            <span style="color: #8a6d55; margin: 0 5px;">|</span>
-            <span style="color: #fff; font-weight: bold; margin-right: 5px; border-bottom: 2px solid #fff; padding-bottom: 2px;">English</span>
-        </div>
-    </nav>
-
-    <div class="container">
-
-     <!-- My Story Section with fixed scroll margin -->
-        <section id="about" class="section" style="scroll-margin-top: 120px;">
-            <!-- קוד עיצוב מובנה לפתרון מהיר של הגודל והטורים -->
-            <style>
-                .about-container {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 40px;
-                    align-items: flex-start;
-                    margin-top: 30px;
-                }
-                .about-text {
-                    flex: 2;
-                    text-align: justify;
-                }
-                .about-images {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    min-width: 280px;
-                }
-                .about-img {
-                    width: 100%;
-                    max-width: 300px;
-                    height: auto;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-                    object-fit: cover;
-                    transition: transform 0.3s ease;
-                }
-                .about-img:hover {
-                    transform: scale(1.02);
-                }
-                @media (max-width: 768px) {
-                    .about-container {
-                        flex-direction: column-reverse;
-                        gap: 20px;
-                    }
-                    .about-images {
-                        width: 100%;
-                        align-items: center;
-                    }
-                }
-            </style>
-
-            <h2>Nice to meet you, I am Gadi Levy</h2>
-            
-            <div class="about-container">
-                <!-- Text Column -->
-                <div class="about-text">
-                    <p>My name is Gadi Levy, born in 1950, a resident of Zichron Yaakov since 1994, and a 10th-generation Israeli. I am lovingly married to Aviva, father to Michal, Rachel, and Eran, and a proud grandfather to my grandchildren in Israel and abroad.</p>
-                    <p>My connection to materials and creation began very early. When I was only 5 years old, in kindergarten, I created a tiny puppy out of clay. At the age of 12, I carved a small bird out of wood. My dear parents kept these early creations, and they proudly accompany me to this day—a living testimony to the artistic spark that was waiting inside.</p>
-                    <p>For decades, my life path was completely distant from the classical art world. I am a mechanical engineer, a 1977 graduate of the Technion. I served for 25 years in the regular army, in the Ordnance Corps, and after retiring from the IDF with the rank of Lieutenant Colonel, I managed manufacturing plants in various industries—  from metal and automotive, through medical and concrete, to the wood industry.</p>
-                    <p>About 15 years ago, following a retirement due to medical reasons, a transformation occurred. Industrial raw materials and engineering calculations made way, and the artist within me burst out with full force. Suddenly, all the technical knowledge, material understanding, and precision I had acquired as an engineer merged with the passion for creation.</p>
-                    <p>My current journey actually began out of longing and love for my young grandchildren overseas. I wanted to give them something unique, so I started creating wooden puzzles for them. My greatest excitement was hearing them proudly tell their friends abroad: "Grandpa made this!".</p>
-                    <p>Since I came to art on my own, I also developed my own unique working method. My "studio" is replaced by a wooden gazebo that I built with my own hands in my backyard, featuring a strong workbench. There, under the open sky, the magic happens: I do not carve in the traditional way. I perform the initial heavy work using a chainsaw and a jigsaw. From there, I move on to dozens of hours of meticulous manual work with a hammer and chisels of various sizes, and I finish with patient polishing — first with hand files, and later with tiny mills mounted on an electric rotary tool.</p>
-                    <p>From one sculpture to the next, I felt my technique, volume, and professional level rise and deepen. Alongside dozens of wood sculptures, I also create oil paintings, which sometimes become unique puzzles, and large pictures (some of which currently adorn my son-in-law's office in America).</p>
-                    <p>After exhibiting my works as part of the "Open Houses" in Zichron Yaakov and having the privilege of sharing my creation with hundreds of visitors, I am thrilled to open the doors of this digital gallery to you.</p>
-                    <p class="highlight">"Artistry crafted in wood, capturing imagination, geometry, and a lifetime of stories."</p>
+  <div class="gallery-item mobiles" onclick="openModal('mobile2c.jpg')">
+                    <img src="mobile3a.jpg" alt="מובייל מעץ">
+                    <div class="item-info">
+                        <h3>מובייל יונה מעץ</h3>
+                    </div>
                 </div>
-                
-                <!-- Images Column -->
-                <div class="about-images">
-                    <img src="gadi1.jpg" alt="Gadi Levy - Profile" class="about-img profile-img">
-                    <img src="gadi2.jpg" alt="Gadi Levy working on wood" class="about-img work-img">
-                </div>
-            </div>
-        </section>
-
 
         <!-- Gallery Section with fixed scroll margin -->
         <section id="gallery" class="section" style="scroll-margin-top: 120px;">
