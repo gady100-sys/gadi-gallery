@@ -1612,6 +1612,86 @@
     <span style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('imageModal').style.display='none'">&times;</span>
     <img id="modalImage" style="margin: auto; display: block; max-width: 80%; max-height: 80%; border: 3px solid white; border-radius: 5px;">
 </div>
+
+<section id="exhibitions" class="section" style="scroll-margin-top: 120px;">
+        <h2>תערוכות ואירועים</h2>
+        <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 30px auto;">
+            מבחר רגעים, זכרונות ומפגשים מתוך תערוכות שונות בהן זכיתי להציג ולשתף את יצירותיי עם הקהל הרחב.
+        </p>
+
+        <style>
+            .exhibition-group {
+                margin-bottom: 40px;
+                background: #fdfbf7;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            .exhibition-group h3 {
+                color: #5d4037;
+                border-bottom: 2px solid #d7ccc8;
+                padding-bottom: 8px;
+                margin-bottom: 20px;
+                font-size: 1.4rem;
+            }
+            .exhibition-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 15px;
+            }
+            .exhibition-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 6px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                background: #fff;
+                aspect-ratio: 4 / 3;
+            }
+            .exhibition-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                display: block;
+            }
+            .exhibition-item img:hover {
+                transform: scale(1.05);
+            }
+        </style>
+
+        <div class="exhibition-group">
+            <h3>אירועי "בתים פתוחים" – זכרון יעקב (2023, 2024)</h3>
+            <p style="margin-bottom: 15px; color: #555;">רגעים מתוך חגיגות האמנות שנערכו בחצר ביתי, בהן פתחתי את הדלתות ואת הלב למאות מבקרים.</p>
+            <div class="exhibition-grid">
+                <div class="exhibition-item"><img src="exhibit1.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit2.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit3.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit4.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit5.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit6.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+                <div class="exhibition-item"><img src="exhibit7.jpg" alt="בתים פתוחים זכרון יעקב"></div>
+            </div>
+        </div>
+
+        <div class="exhibition-group">
+            <h3>תערוכת "אין לי ארץ אחרת" – בית יד לבנים, אור עקיבא (מוצגת כיום)</h3>
+            <p style="margin-bottom: 15px; color: #555;">מתוך התערוכה הקבוצתית המציגה בימים אלו בבית יד לבנים באור עקיבא.</p>
+            <div class="exhibition-grid">
+                <div class="exhibition-item"><img src="exhibit10.jpg" alt="תערוכת אין לי ארץ אחרת"></div>
+                <div class="exhibition-item"><img src="exhibit11.jpg" alt="תערוכת אין לי ארץ אחרת"></div>
+            </div>
+        </div>
+
+        <div class="exhibition-group">
+            <h3>תערוכת "הרוח המלטפת שדות אדומים" – בית המוכתר, זכרון יעקב (2024)</h3>
+            <p style="margin-bottom: 15px; color: #555;">מבחר צילומים מתוך התערוכה המיוחדת שנערכה במבנה ההיסטורי של בית המוכתר.</p>
+            <div class="exhibition-grid">
+                <div class="exhibition-item"><img src="exhibit20.jpg" alt="תערוכת הרוח המלטפת שדות אדומים"></div>
+                <div class="exhibition-item"><img src="exhibit21.jpg" alt="תערוכת הרוח המלטפת שדות אדומים"></div>
+                <div class="exhibition-item"><img src="exhibit22.jpg" alt="תערוכת הרוח המלטפת שדות אדומים"></div>
+            </div>
+        </div>
+    </section>
         
      <section id="contact-section" class="section" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px; scroll-margin-top: 30px;">
         <h2>ספר אורחים ותגובות</h2>
