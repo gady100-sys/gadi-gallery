@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gadi Levy – Wood Artistry</title>
- <style>
+    <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f9f6f0; 
@@ -83,7 +83,6 @@
             color: white;
         }
 
-        /* כאן הגדרנו את הרשת שתמיד תכריח את התמונות להסתדר בשורות */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
@@ -135,6 +134,29 @@
             border-radius: 4px;
             font-weight: bold;
         }
+
+        /* עיצוב המחיר והוואטסאפ החדש בגרסה האנגלית */
+        .item-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 12px 0;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +166,7 @@
         <p>A digital gallery of sculptures, 3D puzzles, and paintings</p>
     </header>
 
-  <nav style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px;">
+    <nav style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px;">
         <div style="text-align: center;">
             <a href="#about" style="margin: 0 15px;">My Story</a>
             <a href="#gallery" style="margin: 0 15px;">My Gallery</a>
@@ -160,7 +182,7 @@
 
     <div class="container">
 
-     <section id="about" class="section" style="scroll-margin-top: 120px;">
+        <section id="about" class="section" style="scroll-margin-top: 120px;">
             <style>
                 .about-container {
                     display: flex;
@@ -203,34 +225,6 @@
                     }
                 }
             </style>
-<style>
-    /* עיצוב המחיר - מודגש ובולט */
-    .item-price {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: #2c3e50;
-        margin: 12px 0;
-    }
-
-    /* עיצוב כפתור הוואטסאפ - רקע ירוק, טקסט לבן וממורכז */
-    .whatsapp-btn {
-        display: inline-block;
-        background-color: #25D366;
-        color: white !important;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        margin-top: 10px;
-        transition: background-color 0.3s ease;
-        text-align: center;
-    }
-
-    /* אפקט מעבר עכבר על הכפתור */
-    .whatsapp-btn:hover {
-        background-color: #128C7E;
-    }
-</style>
          
             <h2>Nice to meet you, I am Gadi Levy</h2>
             
@@ -238,7 +232,7 @@
                 <div class="about-text">
                     <p>My name is Gadi Levy, born in 1950, a resident of Zichron Yaakov since 1994, and a 10th-generation Israeli. I am lovingly married to Aviva, father to Michal, Rachel, and Eran, and a proud grandfather to my grandchildren in Israel and abroad.</p>
                     <p>My connection to materials and creation began very early. When I was only 5 years old, in kindergarten, I created a tiny puppy out of clay. At the age of 12, I carved a small bird out of wood. My dear parents kept these early creations, and they proudly accompany me to this day—a living testimony to the artistic spark that was waiting inside.</p>
-                    <p>For decades, my life path was completely distant from the classical art world. I am a mechanical engineer, a 1977 graduate of the Technion. I served for 25 years in the regular army, in the Ordnance Corps, and after retiring from the IDF with the rank of Lieutenant Colonel, I managed manufacturing plants in various industries—  from metal and automotive, through medical and concrete, to the wood industry.</p>
+                    <p>For decades, my life path was completely distant from the classical art world. I am a mechanical engineer, a 1977 graduate of the Technion. I served for 25 years in the regular army, in the Ordnance Corps, and after retiring from the IDF with the rank of Lieutenant Colonel, I managed manufacturing plants in various industries— from metal and automotive, through medical and concrete, to the wood industry.</p>
                     <p>About 15 years ago, following a retirement due to medical reasons, a transformation occurred. Industrial raw materials and engineering calculations made way, and the artist within me burst out with full force. Suddenly, all the technical knowledge, material understanding, and precision I had acquired as an engineer merged with the passion for creation.</p>
                     <p>My current journey actually began out of longing and love for my young grandchildren overseas. I wanted to give them something unique, so I started creating wooden puzzles for them. My greatest excitement was hearing them proudly tell their friends abroad: "Grandpa made this!".</p>
                     <p>Since I came to art on my own, I also developed my own unique working method. My "studio" is replaced by a wooden gazebo that I built with my own hands in my backyard, featuring a strong workbench. There, under the open sky, the magic happens: I do not carve in the traditional way. I perform the initial heavy work using a chainsaw and a jigsaw. From there, I move on to dozens of hours of meticulous manual work with a hammer and chisels of various sizes, and I finish with patient polishing — first with hand files, and later with tiny mills mounted on an electric rotary tool.</p>
@@ -254,7 +248,7 @@
             </div>
         </section>
     
- <section id="gallery" class="section" style="scroll-margin-top: 120px;">
+    <section id="gallery" class="section" style="scroll-margin-top: 120px;">
             <h2>My Gallery</h2>
             
             <div class="filter-buttons">
@@ -273,7 +267,8 @@
             </div>
             <div class="gallery-grid">
                 
-        <div class="gallery-item sculpture">
+                <!-- Artwork 1 - Image A -->
+                <div class="gallery-item sculpture">
                     <img src="sculpture1a.jpg" alt="Wood Sculpture - Main View">
                     <div class="item-info">
                         <h3>Woman's Head Sculpture Dedicated to Breast Cancer Survivors</h3>
@@ -286,6 +281,7 @@
                     </div>
                 </div>
 
+                <!-- Artwork 1b - Image B -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture1b.jpg" alt="Wood Sculpture - Side View">
                     <div class="item-info">
@@ -296,6 +292,7 @@
                     </div>
                 </div>
 
+                <!-- Artwork 1c - Image C -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture1c.jpg" alt="Wood Sculpture - Inscription Detail">
                     <div class="item-info">
@@ -305,40 +302,48 @@
                         <a href="https://wa.me/972548118865?text=Hi%20Gadi%2C%20I%20am%20interested%20in%20the%20Woman%27s%20Head%20Sculpture%20Dedicated%20to%20Breast%20Cancer%20Survivors" target="_blank" class="whatsapp-btn">Inquire via WhatsApp</a>
                     </div>
                 </div>
-                </div>
-                <!-- Artwork 2a -->
+
+                <!-- Artwork 2a - Image A -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture2a.jpg" alt="Wood Sculpture">
                     <div class="item-info">
                         <h3>The Man Torn Between His Desires</h3>
                         <p>Created from Indian Rosewood (Sissoo) that naturally split. The crack inspired the idea of a man debating between his good and evil inclinations. I placed an angel on his right shoulder and a demon on his left shoulder to represent these inner drives.</p>
+                        <div class="item-price">$5,000</div>
+                        <a href="https://wa.me/972548118865?text=Hi%20Gadi%2C%20I%20am%20interested%20in%20The%20Man%20Torn%20Between%20His%20Desires%20Sculpture" target="_blank" class="whatsapp-btn">Inquire via WhatsApp</a>
                     </div>
                 </div>
 
-                <!-- Artwork 2b -->
+                <!-- Artwork 2b - Image B -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture2b.jpg" alt="Wood Sculpture">
                     <div class="item-info">
                         <h3>The Man Torn Between His Desires</h3>
                         <p>The Indian Rosewood features distinct layers, with a dark core and a light outer shell—another motif expressing inner conflict. The demon riding his left shoulder is clearly visible here. Height: 54 cm, Weight: 15 kg (excluding base).</p>
+                        <div class="item-price">$5,000</div>
+                        <a href="https://wa.me/972548118865?text=Hi%20Gadi%2C%20I%20am%20interested%20in%20The%20Man%20Torn%20Between%20His%20Desires%20Sculpture" target="_blank" class="whatsapp-btn">Inquire via WhatsApp</a>
                     </div>
                 </div>
 
-                <!-- Artwork 2c -->
+                <!-- Artwork 2c - Image C -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture2c.jpg" alt="Wood Sculpture">
                     <div class="item-info">
                         <h3>The Man Torn Between His Desires</h3>
                         <p>Here the angel on the right shoulder can be seen. The man covers his face with his hands in despair.</p>
+                        <div class="item-price">$5,000</div>
+                        <a href="https://wa.me/972548118865?text=Hi%20Gadi%2C%20I%20am%20interested%20in%20The%20Man%20Torn%20Between%20His%20Desires%20Sculpture" target="_blank" class="whatsapp-btn">Inquire via WhatsApp</a>
                     </div>
                 </div>
 
-                <!-- Artwork 2d -->
+                <!-- Artwork 2d - Image D -->
                 <div class="gallery-item sculpture">
                     <img src="sculpture2d.jpg" alt="Wood Sculpture">
                     <div class="item-info">
                         <h3>The Man Torn Between His Desires</h3>
                         <p>The sculpture shown on its base, which I purchased in Daliat el-Carmel, also crafted from Rosewood.</p>
+                        <div class="item-price">$5,000</div>
+                        <a href="https://wa.me/972548118865?text=Hi%20Gadi%2C%20I%20am%20interested%20in%20The%20Man%20Torn%20Between%20His%20Desires%20Sculpture" target="_blank" class="whatsapp-btn">Inquire via WhatsApp</a>
                     </div>
                 </div>
 
